@@ -9,8 +9,8 @@ module X3p1
 
     # backward from odd
     def prev1(x)
-      val = (x - 1) / 3
-      (val if val.odd?) if (x - 1).fdiv(3) == val
+      value = (x - 1) / 3
+      value.odd? && value if (x - 1).fdiv(3) == value
     end
 
     # backward from even
@@ -19,3 +19,9 @@ module X3p1
     end
   end
 end
+
+#
+# todo ruby bug
+# why it is not equal to prev1:
+# (value = (x - 1) / 3).odd? && value if (x - 1).fdiv(3) == value
+#
