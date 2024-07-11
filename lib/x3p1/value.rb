@@ -10,9 +10,7 @@ module X3p1
     # backward from odd
     def prev1(x)
       val = (x - 1) / 3
-      if (x - 1).fdiv(3) == val
-        val if val.odd?
-      end
+      (val if val.odd?) if (x - 1).fdiv(3) == val
     end
 
     # backward from even
