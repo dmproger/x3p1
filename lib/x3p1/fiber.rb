@@ -18,7 +18,7 @@ module X3p1
         has[value] = true
       end
     rescue Cycle
-      raise NewCycle, "#{x}..#{value}" unless values.last == 1
+      raise NewCycle, "#{x}..#{value}" unless values.last == 1 || values.first == 1
       values
     end
   end

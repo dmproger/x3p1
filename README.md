@@ -59,15 +59,6 @@ show: 20, min: 1, max: 512
 -----
 max value: 512
 
-# there is some interesting math moments. for example:
-# values tree with first 638 numbers filled from 1 to 638 must contain a 2037249 values with 9007199254740992 max one
-COUNT=2037249 SHOW=638 SORT=1 TREE=1 ruby main.rb
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, ... 636, 637, 638]
------
-show: 638, min: 1, max: 638
------
-max value: 9007199254740992
-
 # you can also build tree, starting with another x, for example with a big one.
 # you will get a mindblow huge max value in an output, try that one:
 X=374662789498737752398765345678 COUNT=100000 SHOW=100 SORT=1 TREE=1 ruby main.rb
